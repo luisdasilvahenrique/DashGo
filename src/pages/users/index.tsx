@@ -1,7 +1,7 @@
 import { Box, Button, Checkbox, Flex, Heading, HStack, Icon, Stack, Table, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
-import { RiAddLine, RiChatDeleteLine, RiDeleteBinLine, RiDeleteRow, RiEditLine } from "react-icons/ri";
+import { RiAddLine, RiDeleteBinLine, RiDeleteRow, RiEditLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
-import { Pagination } from "../../components/pagination";
+import { Pagination } from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
 
 export default function UserList() {

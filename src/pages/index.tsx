@@ -21,8 +21,8 @@ export default function SignIn() {
       >
         <Stack spacing='4'>
         
-        <Input name='email' id='email' label='E-mail'/>
-        <Input name='password' id='password' label='Senha'/> 
+        <Input name='email' type="email" id='email' label='E-mail'/>
+        <Input name='password' type="password" id='password' label='Senha'/> 
         
         </Stack>
 
