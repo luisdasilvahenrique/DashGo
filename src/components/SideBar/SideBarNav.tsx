@@ -9,13 +9,13 @@ export function SideBarNav(){
 
                 <NavSection title='GERAL'>
 
-                    <NavLink icon={RiDashboardLine}> Dashboard </NavLink>
-                    <NavLink icon={RiContactsBookLine}> Usuários </NavLink>
+                    <NavLink href="/dashboard" icon={RiDashboardLine}> Dashboard </NavLink>
+                    <NavLink href="/users" icon={RiContactsBookLine}> Usuários </NavLink>
 
                 </NavSection>
                 <NavSection title='AUTOMOÇÃO'>
-                    <NavLink icon={RiInputMethodLine}> Formulário </NavLink>
-                    <NavLink icon={RiGitMergeLine}> Automoção </NavLink>
+                    <NavLink href="/forms" icon={RiInputMethodLine}> Formulário </NavLink>
+                    <NavLink href="/automation" icon={RiGitMergeLine}> Automoção </NavLink>
                 </NavSection>
             </Stack>
     );
