@@ -1,6 +1,6 @@
-import { Box, Button, Checkbox, Flex, Heading, HStack, Icon, Stack, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, HStack, Icon, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
 import Link from "next/link";
-import { RiAddLine, RiDeleteBinLine, RiDeleteRow, RiEditLine } from "react-icons/ri";
+import { RiAddLine, RiDeleteBinLine, RiEditLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
@@ -77,6 +77,31 @@ export default function UserList() {
                                     </Box>
                                 </Td>
                                 { isWidhtVersion && <Td> 16 de maio, 2022</Td>}
+                                <Td>
+                                    <HStack spacing="2">
+                                    <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiEditLine} fontSize="16"/>}>
+                                            { isWidhtVersion ? 'Editar' : '' }
+                                        </Button>
+                                        <Button as="a" size="sm" fontSize="sm" colorScheme="red" leftIcon={<Icon as={RiDeleteBinLine} fontSize="16  "/>}>
+                                            { isWidhtVersion ? 'Apagar' : '' }
+                                        </Button>
+                                    </HStack>
+                                        
+                                </Td>
+                            </Tr>
+                        </Tbody>
+                        <Tbody>
+                            <Tr>
+                                <Td px={["4","4","6"]}>
+                                    <Checkbox colorScheme="pink" />
+                                </Td>
+                                <Td>
+                                    <Box>
+                                        <Text fontWeight="bold">Luiza Assis</Text>
+                                        <Text fontSize="sm" color="gray.300">luizaassis@gmail.com</Text>
+                                    </Box>
+                                </Td>
+                                { isWidhtVersion && <Td> 5 de maio, 2022</Td>}
                                 <Td>
                                     <HStack spacing="2">
                                     <Button as="a" size="sm" fontSize="sm" colorScheme="green" leftIcon={<Icon as={RiEditLine} fontSize="16"/>}>
