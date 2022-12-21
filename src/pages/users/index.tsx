@@ -1,6 +1,9 @@
 import { Box, Button, Checkbox, Flex, Heading, HStack, Icon, Table, Tbody, Td, Text, Th, Thead, Tr, useBreakpointValue } from "@chakra-ui/react";
+import { response } from "express";
 import Link from "next/link";
+import { useEffect } from "react";
 import { RiAddLine, RiDeleteBinLine, RiEditLine } from "react-icons/ri";
+import { json } from "stream/consumers";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
@@ -10,6 +13,12 @@ export default function UserList() {
         base: false,
         lg: true
     })
+
+    useEffect(() => {
+        fetch("http://localhost:3000/api/users")
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }, [])
 
     return (
         <Box>
