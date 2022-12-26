@@ -24,7 +24,6 @@ import { Pagination } from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
 
 import { useQuery } from "@tanstack/react-query";
-import { replaceAt } from "react-query/types/core/utils";
 
 export default function UserList() {
   const { data, isLoading, error } = useQuery(["users"], async () => {
