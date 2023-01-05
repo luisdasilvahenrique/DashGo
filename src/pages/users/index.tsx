@@ -26,7 +26,7 @@ import { Pagination } from "../../components/Pagination";
 import { SideBar } from "../../components/SideBar";
 import { api } from "../../services/api";
 
-import { getUsers, useUsers } from "../../services/hooks/useUsers";
+import { useUsers } from "../../services/hooks/useUsers";
 import { queryClient } from "../../services/queryClient";
 
 
@@ -120,7 +120,7 @@ export default function UserList({ users }) {
                             </Text>
                           </Box>
                         </Td>
-                        {isWidhtVersion && <Td> {user.createAt}</Td>}
+                        {isWidhtVersion && <Td>{user.createAt}</Td> }
                         <Td>
                           <HStack spacing="2">
                             <Button
@@ -166,12 +166,12 @@ export default function UserList({ users }) {
 }
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const { users, totalCount } = await getUsers(1)
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const { users, totalCount } = await getUsers(1)
 
-  return {
-    props: {
-      users,
-    }
-  }
-}
+//   return {
+//     props: {
+//       users,
+//     }
+//   }
+// }

@@ -5,7 +5,7 @@ type User = {
   id: string;
   name: string;
   email: string;
-  createAt: string | number | Date;
+  createAt: string;
 };
 
 type GetUsersResponse = {
